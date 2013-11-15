@@ -1,0 +1,41 @@
+Array
+(
+    [575] => Array
+        (
+            [201] => Array
+                (
+                    [0] => 90
+                )
+
+        )
+
+    [750] => Array
+        (
+            [203] => Array
+                (
+                    [0] => 06
+                    [1] => 07
+                )
+
+            [205] => Array
+                (
+                    [0] => 01
+                )
+
+        )
+
+    [640] => Array
+        (
+            [025] => Array
+                (
+                    [0] => 01
+                    [1] => 02
+                    [2] => 04
+                )
+
+        )
+
+)
+Hot diggity, section number 01 of ELEMENTARY ALGEBRA is open! Go! Go! Go!
+Hot diggity, section number 02 of ELEMENTARY ALGEBRA is open! Go! Go! Go!
+Hot diggity, section number 04 of ELEMENTARY ALGEBRA is open! Go! Go! Go!

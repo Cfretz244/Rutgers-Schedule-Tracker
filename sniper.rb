@@ -22,7 +22,7 @@ client = Twilio::REST::Client.new account_sid, auth_token
 
 miriamCourses = [Course.new(447, 380, 20)]
 chrisCourses = [Course.new(198, 105, 1), Course.new(198, 417, 1)]
-for count in 0..19
+while true
     for k in 0..1
         k == 0 ? courses = miriamCourses : courses = chrisCourses
         for i in 0..courses.length - 1

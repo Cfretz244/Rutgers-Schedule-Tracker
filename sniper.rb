@@ -12,6 +12,7 @@ class Course
     end
 end
 
+account_sid = "AC3c4e47084e170e028847ee3dbfef6cd0"
 
 courses = [Course.new(447, 380, 20), Course.new(447, 414, 1)]
 for i in 0..courses.length - 1

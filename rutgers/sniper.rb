@@ -21,7 +21,7 @@ auth_token = "10c79fad2ebb7911cb8c1f9c2a5f1ad8"
 client = Twilio::REST::Client.new account_sid, auth_token
 
 miriamCourses = [Course.new(447, 380, 20)]
-chrisCourses = [Course.new(198, 344), Course.new(198, 214)]
+chrisCourses = [Course.new(198, 344), Course.new(198, 214, 1), Course.new(198, 214, 2), Course.new(198, 214, 3), Course.new(198, 214, 4)]
 begin
     while true
         for k in 0..1

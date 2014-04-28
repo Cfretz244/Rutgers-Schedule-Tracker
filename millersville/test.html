@@ -1,123 +1,0 @@
-<html>
-    <body>
-        <form action="http://max.millersville.edu/prod/hwzkschd.P_MU_SchedDisplay" method="POST" onSubmit="return ValidateData()" NAME="valform">
-            <INPUT TYPE="hidden" NAME="lookopt" VALUE="DEP">
-            <P>
-            <TABLE  CLASS="dataentrytable" >
-                <TR>
-                    <TD CLASS="delabel" scope="row" >Term:</TD>
-                    <TD CLASS="dedefault">
-                        <SELECT NAME="term" SIZE="1">
-                            <OPTION VALUE="201410">Winter 2014
-                            <OPTION VALUE="201420">Spring 2014
-                            <OPTION VALUE="201430">Summer 1 2014
-                            <OPTION VALUE="201440">Summer 2 2014
-                            <OPTION VALUE="201450">Summer 3 2014
-                            <OPTION VALUE="201460" SELECTED>Fall 2014
-                        </SELECT>
-                    </TD>
-                </TR>
-            </TABLE>
-            <P>
-            <TABLE  CLASS="dataentrytable" >
-                <TR>
-                    <TD CLASS="delabel" scope="row" >Department:</TD>
-                    <TD CLASS="dedefault">
-                        <SELECT NAME="param1" SIZE="1">
-                            <OPTION VALUE=""> 
-                            <OPTION VALUE="AEST">AEST (Applied Engineering, Sfty/Tech)
-                            <OPTION VALUE="AFAM">AFAM (African American Studies Minor)
-                            <OPTION VALUE="ART">ART (Art & Design)
-                            <OPTION VALUE="BIOL">BIOL (Biology)
-                            <OPTION VALUE="BUAD">BUAD (Business Administration)
-                            <OPTION VALUE="CDRE">CDRE (Center Disaster Research/Educ)
-                            <OPTION VALUE="CHEM">CHEM (Chemistry)
-                            <OPTION VALUE="COMM">COMM (Communication & Theatre)
-                            <OPTION VALUE="CSCI">CSCI (Computer Science)
-                            <OPTION VALUE="ECON">ECON (Economics)
-                            <OPTION VALUE="EDFN">EDFN (Educational Foundations)
-                            <OPTION VALUE="ELED">ELED (Elem. & Early Child. Education)
-                            <OPTION VALUE="ENGL">ENGL (English)
-                            <OPTION VALUE="ENTR">ENTR (Entrepreneurship Minor)
-                            <OPTION VALUE="ESCI">ESCI (Earth Sciences)
-                            <OPTION VALUE="FORL">FORL (Foreign Languages)
-                            <OPTION VALUE="GEOG">GEOG (Geography)
-                            <OPTION VALUE="GOVT">GOVT (Govrnmnt and Political Affairs)
-                            <OPTION VALUE="HIST">HIST (History)
-                            <OPTION VALUE="HMFA">HMFA (Humanities and Fine Arts)
-                            <OPTION VALUE="ITEC">ITEC (Industry & Technology)
-                            <OPTION VALUE="LATO">LATO (Latino Studies)
-                            <OPTION VALUE="LATS">LATS (Latino/a Studies Minor)
-                            <OPTION VALUE="MATH">MATH (Mathematics)
-                            <OPTION VALUE="MILS">MILS (Military Science)
-                            <OPTION VALUE="MUSI">MUSI (Music)
-                            <OPTION VALUE="NONE">NONE (No Department)
-                            <OPTION VALUE="NURS">NURS (Nursing)
-                            <OPTION VALUE="PHIL">PHIL (Philosophy)
-                            <OPTION VALUE="PHYS">PHYS (Physics)
-                            <OPTION VALUE="PSYC">PSYC (Psychology)
-                            <OPTION VALUE="SCMA">SCMA (Science and Mathematics)
-                            <OPTION VALUE="SOAN">SOAN (Sociology/Anthropology)
-                            <OPTION VALUE="SOWK">SOWK (Social Work)
-                            <OPTION VALUE="SPED">SPED (Special Education)
-                            <OPTION VALUE="SPRG">SPRG (Special Programs)
-                            <OPTION VALUE="SSCI">SSCI (Social Sciences)
-                            <OPTION VALUE="WSSD">WSSD (Wellness and Sport Sciences)
-                        </SELECT>
-                    </TD>
-                </TR>
-            </TABLE>
-            <P>
-            <INPUT TYPE="radio" NAME="param2" VALUE="U" CHECKED>Undergraduate Courses <INPUT TYPE="radio" NAME="param2" VALUE="G">Graduate Courses 
-            <P>
-            <INPUT TYPE="radio" NAME="openopt" VALUE="ALL" CHECKED>All Courses <INPUT TYPE="radio" NAME="openopt" VALUE="OPEN">Open Courses Only
-            <P>
-            <INPUT TYPE="submit" VALUE="Submit">
-            <SCRIPT LANGUAGE="JavaScript" TYPE="text/javascript">
-                <!--  Hide from non-JavaScript enabled browsers 
-                function isAlpha(c) {
-                    return (((c >= 'a') && (c <= 'z')) || ((c >= 'A') && (c <= 'Z')));
-                }
-function isDigit(c) {
-    return ((c >= '0') && (c <= '9'));
-}
-function isAlphanum(c) {
-    return (isAlpha(c) || isDigit(c));
-}
-function ValidFormat(testVal, valType) {
-    var dotFound=false;
-    for (i=0; i<testVal.length; i++) {
-        if ((valType=='currency') && (testVal.charAt(i)=='.')) {
-            if (dotFound)
-            {return false}
-            else
-            {dotFound=true}
-        }
-        else {
-            if (valType=='alphanum') {
-                if (!isAlphanum(testVal.charAt(i)))
-                {return false}
-            }
-            if (valType=='alpha') {
-                if (!isAlpha(testVal.charAt(i)))
-                {return false}
-            }
-            if (valType=='integer' || valType=='currency') {
-                if (!isDigit(testVal.charAt(i)))
-                {return false}
-            }
-        }
-    }
-    return true
-}
-function ValidateData() {
-    var submit_ind = true; var BeginString = '<HTML><HEAD><TITLE>Data Entry Problems Found<\/TITLE><LINK REL="stylesheet" HREF="/css/web_defaultapp.css" TYPE="text/css"><\/HEAD><BODY class="validationbody">'; var EndString = '<P><FORM METHOD=POST><DIV class="validationdiv"><INPUT TYPE=button VALUE=OK onClick="window.close()"><\/DIV><\/FORM><\/BODY><\/HTML>'; var NullStartString = 'The following field(s) are required. Please enter a value into: <P><UL>'; var NullEndString = '<\/UL>'; var NullString = ''; var LengthStartString = 'Errors were found with the length of the following field(s): <P><UL>'; var LengthEndString = '<\/UL>'; var LengthString = ''; var FormatStartString = 'Please check the format of the following fields: <P><UL>'; var FormatEndString = '<\/UL>'; var FormatString = ''; var ValueStartString = 'Please check the value of the following fields: <P><UL>'; var ValueEndString = '<\/UL>'; var ValueString = ''; var null_errors = false; var length_errors = false; var format_errors = false; var value_errors = false; var tempNumValue; var tempStrValue; var t_height = 150; if (document.valform.param1.value=='')   {NullString += '<LI>Department';     t_height += 20;    null_errors=true;     submit_ind=false} if (document.valform.param2.value=='')   {NullString += '<LI>Levl';     t_height += 20;    null_errors=true;     submit_ind=false} if (submit_ind == true)    {return true} else    if (length_errors)        {t_height += 50}    if (format_errors)        {t_height += 50}    if (value_errors)        {t_height += 50}    {alertWin=window.open('','', 'toolbar=no,status=no,width=300,scrollbars=yes,height=' + t_height);    alertWin.document.open('text\/html');     alertWin.document.write(BeginString);     if (null_errors)        {alertWin.document.write(NullStartString, NullString, NullEndString)}    if (length_errors)        {alertWin.document.write(LengthStartString, LengthString, LengthEndString)}    if (value_errors)        {alertWin.document.write(ValueStartString, ValueString, ValueEndString)}    if (format_errors)        {alertWin.document.write(FormatStartString, FormatString, FormatEndString)}    alertWin.document.write(EndString);     alertWin.document.close();     return false}
-}
-// end script hiding from old browsers -->
-</SCRIPT>
-<P>
-<IMG SRC="/mu/mu_arrow.gif" CLASS="headerImg" TITLE=""  NAME="MUArrow" HSPACE=0 VSPACE=0 BORDER=0 HEIGHT=20 WIDTH=20>
-<A HREF="http://www.millersville.edu/registrar/scheduleandregistration/">Back to Search Menu </A>
-</FORM>
-</body>
-</html>
